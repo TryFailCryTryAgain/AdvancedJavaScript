@@ -7,23 +7,20 @@
 
 
 const int = [1, 2, 3, 2, 4, 2, 5]
-const ints = [1, 2]
 
-let total = 0
-let prev = 0
-
-function checkValue(item) {
-    if (item != prev && total == 0) {
-        prev = item
-        total += 1
-    } else if (item != prev && total != 0 ) {
-        total -= 1
-    } else if (item == prev) {
-        total += 1
+function CountNumbers(array, value) {
+    let amount = 0
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            amount += 1
+        }
     }
+    console.log("Value:", value, "Amount:", amount);
 }
 
-// Failed loop, gotta check thru it again
+CountNumbers(int, 3);
 
-ints.forEach(checkValue);
-console.log(total, prev);
+
+
+
+

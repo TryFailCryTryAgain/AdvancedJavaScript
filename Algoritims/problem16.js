@@ -10,3 +10,9 @@
 // ];
 
 // runSequence(tasks, { retries: 3, delay: 1000 })
+
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
